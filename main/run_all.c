@@ -7,7 +7,7 @@ void makeErrors(FILE *myFile){
     fprintf(myFile,"echo \"Making dir 'errors'\"\n\
 mkdir \"$currentDir\"/errors\n\
 echo \"------------------- Errors output -------------------\"\n\
-for i in $(seq 1 5); do\n\
+for i in $(seq 1 $quantity_ex); do\n\
     diff --color \"$currentDir/testes/$i.out\" \"$currentDir/resul/$i.my\" > \"$currentDir\"/errors/error_$i.my\n\
     exit_code=$?\n\
     if [ $exit_code -eq 1 ]; then\n\
