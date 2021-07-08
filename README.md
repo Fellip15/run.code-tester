@@ -9,7 +9,7 @@ This code will compile and execute your code, making a folder with the resuls an
 ..* Compile the "run_all.c" to make the executable file to run the code.
 
 ..* [Optional] Make alias:
-    1. If you are using bash standart, the alias should be in "~/.bashrc". In this case you must open this file and put "alias name_command=dir_run_all/run_all.c", where name_command is the name of your command [can be any name] and dir_run_al is the folder of the file "run_all". It's recommended that the file be in the home folder, but it's not necessary.
+    1. If you are using bash standart, the alias should be in "\~/.bashrc". In this case you must open this file and put "alias name_command=dir_run_all/run_all.c", where name_command is the name of your command [can be any name] and dir_run_al is the folder of the file "run_all". It's recommended that the file be in the home folder, but it's not necessary.
     2. If you are using something other than bash, you must search where is your source. For example, the source of oh-my-zsh is at "~/.zshrc".
     
 # How to use
