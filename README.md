@@ -17,7 +17,7 @@ This code will compile and execute your code, making a folder with the resuls an
 
 * Don't forget to put a test folder named "testes", with the .in and .out, and the file.c that you want to compile.
 
-* Isn't necessary to put .c after the filename.
+* When you are running, isn't necessary to put .c after the filename. For example, "runall cool_code", not "runall cool_code.c".
 
 * The compiler have two flags:
 
