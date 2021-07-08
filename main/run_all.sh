@@ -20,7 +20,7 @@ for i in $(seq 1 $quantity_ex); do "$currentDir"/"$codename" < "$currentDir"/tes
 echo "Making dir 'errors'"
 mkdir "$currentDir"/errors
 echo "------------------- Errors output -------------------"
-for i in $(seq 1 5); do
+for i in $(seq 1 $quantity_ex); do
     diff --color "$currentDir/testes/$i.out" "$currentDir/resul/$i.my" > "$currentDir"/errors/error_$i.my
     exit_code=$?
     if [ $exit_code -eq 1 ]; then
