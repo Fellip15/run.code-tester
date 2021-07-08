@@ -71,17 +71,18 @@ void showError(FILE *myFile){
 
 int main(int argc, char *argv[]){
     bool withErrors = true;
-    FILE *myFile = fopen("run_all.sh", "w");
+    FILE *myFile = fopen("run_all_ex.sh", "w");
     fprintf(myFile, "#!/bin/bash\n");
 
     if(argc < 2) fprintf(myFile, "\nread -p \"Name of code: \" codename;\n\n");
-    else if(argc < 3){
+    else if(argc < 4){
         if(!strcmp(argv[1], "-h")){
             showHelp();
             return 0;
         }
         else if(!strcmp(argv[1], "-ne")){
-            fprintf(myFile, "\nread -p \"Name of code: \" codename\n\n");
+            if(argc < 3) fprintf(myFile, "\nread -p \"Name of code: \" codename\n\n");
+            else fprintf(myFile, "codename=\"%s\"\n\n", argv[2]);
             withErrors = false;
         }
         else fprintf(myFile, "codename=\"%s\"\n\n", argv[1]);
@@ -93,8 +94,8 @@ int main(int argc, char *argv[]){
     makePattern(myFile, withErrors);
     fclose(myFile);
 
-    system("sh run_all.sh");
-    system("rm run_all.sh");
+    system("sh run_all_ex.sh");
+    system("rm run_all_ex.sh");
 
     return 0;
 }
